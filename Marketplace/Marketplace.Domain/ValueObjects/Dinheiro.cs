@@ -26,5 +26,7 @@ public class Dinheiro
     public static bool operator <(Dinheiro a, Dinheiro b) => a.Valor < b.Valor;
     public static bool operator >=(Dinheiro a, Dinheiro b) => a.Valor >= b.Valor;
     public static bool operator <=(Dinheiro a, Dinheiro b) => a.Valor <= b.Valor;
+    public static bool operator ==(Dinheiro a, Dinheiro b) => a.Valor == b.Valor;
+    public static bool operator !=(Dinheiro a, Dinheiro b) => a.Valor != b.Valor;
 
 }
