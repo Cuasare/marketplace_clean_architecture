@@ -1,6 +1,28 @@
+using Marketplace.Domain.Entities;
+using Markpetplace.Infrastructure.Persistence.Configuration;
+using Microsoft.EntityFrameworkCore;
+
 namespace Markpetplace.Infrastructure.Persistence;
 
-public class AppDbContext
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
     
+    public DbSet<Carteira> Carteiras { get; set; }
+    public DbSet<Pedido> Pedidos { get; set; }
+    public DbSet<ItemPedido> ItensPedidos { get; set; }
+    public DbSet<TransacaoCarteira> TransacoesCarteiras { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Produto> Produtos { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+        modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+        modelBuilder.ApplyConfiguration(new CarteiraConfiguration());
+    }
 }
