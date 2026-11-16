@@ -23,5 +23,7 @@ public class CarteiraConfiguration : IEntityTypeConfiguration<Carteira>
         builder.Navigation(c => c.Saldo)
             .IsRequired();
 
+        builder.Navigation(c => c.Transacoes)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
     }
 }

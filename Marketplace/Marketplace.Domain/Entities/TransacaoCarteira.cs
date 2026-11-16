@@ -19,5 +19,6 @@ public class TransacaoCarteira
         CarteiraId = carteiraId;
         TipoTransacao = tipoTransacao;
         Valor = valor;
+        DataTransacao = DateTime.UtcNow;
     }
 }

@@ -24,5 +24,6 @@ public class AppDbContext : DbContext
         modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
         modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
         modelBuilder.ApplyConfiguration(new CarteiraConfiguration());
+        modelBuilder.ApplyConfiguration(new TransacaoCarteiraConfiguration());
     }
 }
