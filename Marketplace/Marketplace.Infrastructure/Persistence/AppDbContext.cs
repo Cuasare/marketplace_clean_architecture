@@ -1,8 +1,8 @@
 using Marketplace.Domain.Entities;
-using Markpetplace.Infrastructure.Persistence.Configuration;
+using Marketplace.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace Markpetplace.Infrastructure.Persistence;
+namespace Marketplace.Infrastructure.Persistence;
 
 public class AppDbContext : DbContext
 {
