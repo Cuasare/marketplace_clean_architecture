@@ -27,5 +27,6 @@ public class AppDbContext : DbContext
         modelBuilder.ApplyConfiguration(new TransacaoCarteiraConfiguration());
         modelBuilder.ApplyConfiguration(new PedidoConfiguration());
         modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
+        modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
     }
 }
